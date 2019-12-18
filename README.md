@@ -13,25 +13,6 @@ The start version of the project is 0.1.0 by default, you can increase the versi
 
 **NB.** to run `npm version` you need to be on a clean Git working directory (no changes pending and so on).
 
-## Locally run with docker
-To run this project locally, first of all you need to do the docker login:
-
-`docker login nexus.mia-platform.eu`
-
-> To resolve the error __The name org.freedesktop.secrets.......__ follow <a href="https://stackoverflow.com/questions/50151833/cannot-login-to-docker-account" target="_blank">this link</a>
-
-After the login:
-```bash
-nvm i
-npm i
-npm run build
-sudo docker build -t %CUSTOM_PLUGIN_SERVICE_NAME%:latest .
-sudo docker run -d --name angular_template -p 8080:8080 %CUSTOM_PLUGIN_SERVICE_NAME%
-```
-
-Now you can open your browser on <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> to see the Angular template up and running
-
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
