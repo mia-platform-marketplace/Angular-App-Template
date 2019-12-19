@@ -1,0 +1,74 @@
+{
+  "name": "%CUSTOM_PLUGIN_SERVICE_NAME%",
+  "version": "0.1.0",
+  "homepage": "https://www.mia-platform.eu/",
+  "bugs": {
+    "url": "https://makeitapp.atlassian.net",
+    "email": "core@mia-platform.eu"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Mia Platform Core Team <core@mia-platform.eu>",
+  "contributors": [
+    "Francesco Francomano <francesco.francomano@mia-platform.eu>",
+    "Francesco Burelli <francesco.burelli@makeitapp.eu>",
+    "Giuseppe Manzi <giuseppe.manzi@mia-platform.eu>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://git.tools.mia-platform.eu/%GITLAB_GROUP%/%CUSTOM_PLUGIN_SERVICE_NAME%"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod --build-optimizer ",
+    "test": "jest",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "update-docker-version": "sed -i.bck \"s|version=\\\"[0-9]*\\.[0-9]*\\.[0-9]*.*\\\"|version=\\\"${npm_package_version}\\\"|\" Dockerfile",
+    "version": "npm run update-docker-version && rm -fr Dockerfile.bck && git add Dockerfile"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.14",
+    "@angular/common": "~8.2.14",
+    "@angular/compiler": "~8.2.14",
+    "@angular/core": "~8.2.14",
+    "@angular/forms": "~8.2.14",
+    "@angular/platform-browser": "~8.2.14",
+    "@angular/platform-browser-dynamic": "~8.2.14",
+    "@angular/router": "~8.2.14",
+    "rxjs": "^6.5.3",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.20",
+    "@angular/cli": "~8.3.20",
+    "@angular/compiler-cli": "~8.2.14",
+    "@angular/language-service": "~8.2.14",
+    "@types/jasmine": "^3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "jest": "^24.9.0",
+    "jest-preset-angular": "^8.0.0",
+    "pre-commit": "^1.2.2",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^5.20.1",
+    "typescript": "~3.5.3"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ]
+  }
+}
