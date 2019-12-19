@@ -2,7 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-# %CUSTOM_PLUGIN_SERVICE_NAME%
 This project is a custom Angular service created by the Mia-Platform API Console.
 Now you can work on it and customize it.
 
