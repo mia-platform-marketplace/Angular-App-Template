@@ -57,7 +57,7 @@
     "jest-preset-angular": "^8.0.0",
     "pre-commit": "^1.2.2",
     "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
+    "ts-node": "~8.10.1",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^5.20.1",
     "typescript": "~3.5.3"
