@@ -37,10 +37,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title '%CUSTOM_PLUGIN_SERVICE_NAME%'`, () => {
+  it(`should have as title 'mia_template_service_name_placeholder'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('%CUSTOM_PLUGIN_SERVICE_NAME%');
+    expect(app.title).toEqual('mia_template_service_name_placeholder');
   });
 
   it('should render title in a h1 tag', () => {

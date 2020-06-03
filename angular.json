@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "%CUSTOM_PLUGIN_SERVICE_NAME%": {
+    "mia_template_service_name_placeholder": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "%CUSTOM_PLUGIN_SERVICE_NAME%:build"
+            "browserTarget": "mia_template_service_name_placeholder:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "%CUSTOM_PLUGIN_SERVICE_NAME%:build:production"
+              "browserTarget": "mia_template_service_name_placeholder:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "%CUSTOM_PLUGIN_SERVICE_NAME%:build"
+            "browserTarget": "mia_template_service_name_placeholder:build"
           }
         },
         "test": {
@@ -117,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "%CUSTOM_PLUGIN_SERVICE_NAME%:serve"
+            "devServerTarget": "mia_template_service_name_placeholder:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "%CUSTOM_PLUGIN_SERVICE_NAME%:serve:production"
+              "devServerTarget": "mia_template_service_name_placeholder:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "%CUSTOM_PLUGIN_SERVICE_NAME%"
+  "defaultProject": "mia_template_service_name_placeholder"
 }

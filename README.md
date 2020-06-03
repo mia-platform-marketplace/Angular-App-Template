@@ -1,4 +1,4 @@
-# %CUSTOM_PLUGIN_SERVICE_NAME%
+# mia_template_service_name_placeholder
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
@@ -36,8 +36,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Build Docker Image
 
 To build your Docker image you need to build your application using `yarn build` as explained above.
-Then build your image using `docker build -t %CUSTOM_PLUGIN_SERVICE_NAME% .`.
-To run your application use `docker run -d -p 8080:8080 %CUSTOM_PLUGIN_SERVICE_NAME%`.
+Then build your image using `docker build -t mia_template_service_name_placeholder .`.
+To run your application use `docker run -d -p 8080:8080 mia_template_service_name_placeholder`.
 Finally you can access your application running in localhost on port 8080.
 
 
