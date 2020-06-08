@@ -1,22 +1,7 @@
 {
   "name": "mia_template_service_name_placeholder",
   "version": "0.1.0",
-  "homepage": "https://www.mia-platform.eu/",
-  "bugs": {
-    "url": "https://makeitapp.atlassian.net",
-    "email": "core@mia-platform.eu"
-  },
   "license": "SEE LICENSE IN LICENSE",
-  "author": "Mia Platform Core Team <core@mia-platform.eu>",
-  "contributors": [
-    "Francesco Francomano <francesco.francomano@mia-platform.eu>",
-    "Francesco Burelli <francesco.burelli@makeitapp.eu>",
-    "Giuseppe Manzi <giuseppe.manzi@mia-platform.eu>"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://git.tools.mia-platform.eu/%GITLAB_GROUP%/mia_template_service_name_placeholder"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
