@@ -1,46 +1,42 @@
-# mia_template_service_name_placeholder
+# Angular Template walkthrough
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+This walkthrough will explain you how to correctly create a microservice that renders a Angular based webpage from the DevOps Console.
 
-This project is a custom Angular service created by the Mia-Platform API Console.
-Now you can work on it and customize it.
+In order to do so, access to [Mia-Platform DevOps Console](https://console.cloud.mia-platform.eu/login), create a new project and go to the **Design** area.  
+From the Design area of your project select _Microservices_ and then create a new one, you have now reached [Mia-Platform Marketplace](https://docs.mia-platform.eu/development_suite/api-console/api-design/marketplace/)!  
+In the marketplace you will see a set of Examples and Templates that can be used to set-up microservices with a predefined and tested function.  
 
-## Project version
-The start version of the project is 0.1.0 by default, you can increase the version using the `npm version` command:
+For this walkthrough select the following template: **Angular Template**.
+Give your microservice the name you prefer, in this walkthrough we'll refer to it with the following name: **angular-service**. Then, fill the other required fields and confirm that you want to create a microservice.  
+A more detailed description on how to create a Microservice can be found in [Microservice from template - Get started](https://docs.mia-platform.eu/development_suite/api-console/api-design/custom_microservice_get_started/#2-service-creation) section of Mia-Platform documentation.
 
->e.g. `npm version minor` will upgrade the version from 0.1.0 to 0.2.0
+In order to access to your new microservice it is necessary to create an endpoint that targets it.  
+In particular, in this walkthrough you will create an endpoint to your microservice *angular-service*. To do so, from the Design area of your project select _Endpoints_ and then create a new endpoint.
+Now you need to choose a path for your endpoint and to connect this endpoint to your microservice. Give to your endpoint the following path: **/angular**. Then, specify that you want to connect your endpoint to a microservice and, finally, select *angular-service*.  
+Step 3 of [Microservice from template - Get started](https://docs.mia-platform.eu/development_suite/api-console/api-design/custom_microservice_get_started/#3-creating-the-endpoint) section of Mia-Platform documentation will explain in detail how to create an endpoint from the DevOps Console.
 
-**NB.** to run `npm version` you need to be on a clean Git working directory (no changes pending and so on).
+This template requires to change the value of an environment variable to work properly. Go to the table *Environment variable configuration* of the newly created microservice *angular-service* and modify the following (key = value):
 
-## Development server
+```shell
+HTTP_PORT = 8080
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+More information on how to set and modify an environment variable can be found in [Environment Variable Configuration](https://docs.mia-platform.eu/development_suite/api-console/api-design/services/#environment-variable-configuration) section of Mia-Platform documentation.
 
-## Code scaffolding
+After having created an endpoint to your microservice you should save the changes that you have done to your project in the DevOps console.  
+Remember to choose a meaningful title for your commit (e.g "created service angular_service"). After some seconds you will be prompted with a popup message which confirms that you have successfully saved all your changes.  
+Step 4 of [Microservice from template - Get started](https://docs.mia-platform.eu/development_suite/api-console/api-design/custom_microservice_get_started/#4-save-the-project) section of Mia-Platform documentation will explain how to correctly save the changes you have made on your project in the DevOps console.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once all the changes that you have made are saved, you should deploy your project through the DevOps Console. Go to the **Deploy** area of the DevOps Console.  
+Once here select the environment and the branch you have worked on and confirm your choices clicking on the *deploy* button. When the deploy process is finished you will receveive a pop-up message that will inform you.  
+Step 5 of [Microservice from template - Get started](https://docs.mia-platform.eu/development_suite/api-console/api-design/custom_microservice_get_started/#5-deploy-the-project-through-the-api-console) section of Mia-Platform documentation will explain in detail how to correctly deploy your project.
 
-## Build
+Now, if you copy/paste the following url in the search bar of your broser (remember to replace `<YOUR_PROJECT_HOST>` with the real host of your project):
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-Run `yarn build` for a production build.
+```shell
+curl <YOUR_PROJECT_HOST>/angular/
+```
 
-## Running unit tests
+you should see an angular-based webpage.
 
-Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Build Docker Image
-
-To build your Docker image you need to build your application using `yarn build` as explained above.
-Then build your image using `docker build -t mia_template_service_name_placeholder .`.
-To run your application use `docker run -d -p 8080:8080 mia_template_service_name_placeholder`.
-Finally you can access your application running in localhost on port 8080.
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Congratulations! You have successfully learnt how to use our Node.js _Angular_ Template on the DevOps Console!
