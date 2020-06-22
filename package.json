@@ -8,6 +8,7 @@
     "build": "ng build --prod --build-optimizer ",
     "test": "ng test",
     "coverage": "ng test --collect-coverage",
+    "postcoverage": "tap --coverage-report=lcov --no-browser",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "update-docker-version": "sed -i.bck \"s|version=\\\"[0-9]*\\.[0-9]*\\.[0-9]*.*\\\"|version=\\\"${npm_package_version}\\\"|\" Dockerfile",
