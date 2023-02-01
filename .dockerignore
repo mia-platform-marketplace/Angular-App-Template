@@ -12,6 +12,7 @@ tests
 *.env
 *.log*
 .gitignore
+.npmrc
 .nvmrc
 .yarn-integrity
 Dockerfile
